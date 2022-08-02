@@ -1,0 +1,33 @@
+.header {
+  background-color: #131c23;
+	grid-area: h;
+	border-radius: 2.5rem;
+}
+.container {
+  max-width: 122rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+.header__top {
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.logo__img {
+  height: 5.4rem;
+  width: 5.4rem;
+  color: #ffffff;
+}
+.menu {
+  display: flex;
+  width: 100%;
+	font-size: 1.6rem;
+}
+.menu__list {
+  color: #ffffff;
+  padding: 1.6rem;
+}
+.menu__list:last-child {
+  margin-left: auto;
+}
+

@@ -1,0 +1,77 @@
+.sidebar {
+	height: 28rem;
+	background: #1c2330;
+	border-top-left-radius: 2.5rem;
+}
+.user__photo {
+	margin-top: 2rem;
+	text-align: center;
+}
+.photo {
+	border-radius: 50%;
+	height: 10rem;
+	padding: 1rem;
+	border: 0.2rem solid #999;
+}
+.name {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 2.4rem;
+		color: #fafafa;
+		margin-bottom: 0.5rem;
+}
+.tick {
+	position: relative;
+	width: 3rem;
+	height: 3rem;
+	background: #1ce589;
+	border-radius: 50%;
+	bottom: 9.5rem;
+	left: 16.5rem;
+	border: 0.3rem solid #1c2330;
+}
+.city {
+	color: #a2a5b9;
+	font-size: 1.6rem;
+}
+.user__follow {
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	color: #a2a5b9;
+	font-size: 1.6rem;
+	margin: 0 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #555;
+}
+.user__follow span {
+	display: block;
+	font-weight: 500;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	color: #fafafa;
+}
+.user__menu {
+	background: #1c2330;
+	border-bottom-left-radius: 2.5rem;
+}
+.sidebar-menu {
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	height: calc(100vh - 36rem);
+}
+.sidebar-menu::-webkit-scrollbar {
+	display: none;
+}
+.sidebar-menu__item {
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2rem;
+	padding: 2rem 0 2rem 10rem;
+	color: #a2a5b9;
+}
+.sidebar-menu__separator {
+	border-bottom: 1px solid #555;
+	margin: 0 2rem;
+}
