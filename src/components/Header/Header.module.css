@@ -30,4 +30,7 @@
 .list:last-child {
   margin-left: auto;
 }
+.active {
+	color: #d7c904;
+}
 

@@ -11,7 +11,7 @@ const Header = () => {
             <img src={Logo} alt="FriendKit" className={header.img} />
           </a>
           <ul className={header.menu}>
-            <li className={header.list}>
+            <li className={`${header.list} ${header.active}`}>
               <a href="#link">Friend Requests</a>
             </li>
             <li className={header.list}>
