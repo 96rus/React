@@ -8,12 +8,12 @@
   padding: 0 1rem;
   margin: 0 auto;
 }
-.header__top {
+.top {
   padding: 0.8rem 1.2rem;
   display: flex;
   justify-content: flex-start;
 }
-.logo__img {
+.img {
   height: 5.4rem;
   width: 5.4rem;
   color: #ffffff;
@@ -23,11 +23,11 @@
   width: 100%;
 	font-size: 1.6rem;
 }
-.menu__list {
+.list {
   color: #ffffff;
   padding: 1.6rem;
 }
-.menu__list:last-child {
+.list:last-child {
   margin-left: auto;
 }
 

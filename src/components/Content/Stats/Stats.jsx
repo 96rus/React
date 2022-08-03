@@ -1,9 +1,9 @@
 import React from 'react'
-import './Stats.css'
+import stats from './Stats.module.css'
 
 const Stats = () => {
 	return (
-		<div className='stats'>
+		<div className={stats.stats}>
 			Stats
 		</div>
 	)
