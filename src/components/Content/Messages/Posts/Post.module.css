@@ -1,0 +1,36 @@
+.post {
+	padding: 5rem;
+	display: flex;
+	gap: 3rem;
+	min-height: 10rem;
+}
+.post img {
+	height: 5rem;
+	width: 5rem;
+	border-radius: 50%;
+}
+.message {
+	text-align: right;
+	color: #999;
+	font-size: 1.4rem;
+}
+.text {
+	max-width: 32rem;
+	padding: 1rem;
+	background: #5082c3;
+	color: #fafafa;
+	text-align: left;
+	border-radius: 0.5rem;
+}
+.text::before {
+	position: relative;
+    display: block;
+    content: "";
+    top: -1rem;
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+		left: -1.5rem;
+    border-top: 0.5rem solid #5082c3;
+}

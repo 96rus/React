@@ -1,0 +1,8 @@
+.users {
+	display: flex;
+	overflow-x: scroll;
+	border-radius: 1rem;
+}
+.users::-webkit-scrollbar {
+	display: none;
+}

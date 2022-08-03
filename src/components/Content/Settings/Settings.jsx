@@ -4,7 +4,7 @@ import settings from './Settings.module.css'
 const Settings = () => {
 	return (
 		<div className={settings.settings}>
-			Settings
+			<h1 className="title">Settings</h1>
 		</div>
 	)
 }

@@ -1,0 +1,38 @@
+.textarea {
+	margin-top: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+	padding: 1rem;
+	background: #222a39;
+	border-radius: 1rem;
+}
+.textarea button {
+	background: #3d70b2;
+	padding: 1rem;
+	border-radius: 1.5rem;
+	border: none;
+	color: #fff;
+	transition: all .5s;
+}
+.textarea button:hover {
+	background: #41d6c3;
+}
+.chat {
+	display: inline-block;
+	width: 90%;
+	height: 2rem;
+	background: #222a39;
+	border: none;
+	resize: none;
+	color: #fff;
+	font-size: 1.6rem;
+	line-height: 1.6;
+}
+.chat:focus {
+	outline: none;
+}
+.chat::-webkit-scrollbar {
+	display: none;
+}

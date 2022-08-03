@@ -1,0 +1,16 @@
+.user {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10rem;
+	height: 10rem;
+	background: #242d3c;
+	padding: 0 2rem;
+}
+.user:hover {
+	background: #283143;
+}
+.user img {
+	width: 5rem;
+	border-radius: 50%;
+}
