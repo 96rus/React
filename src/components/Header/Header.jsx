@@ -12,22 +12,22 @@ const Header = () => {
           </a>
           <ul className={header.menu}>
             <li className={`${header.list} ${header.active}`}>
-              <a href="#link">Friend Requests</a>
+              <a href="/friendRequests">Friend Requests</a>
             </li>
             <li className={header.list}>
-              <a href="#link">Notifications</a>
+              <a href="/notifications">Notifications</a>
             </li>
             <li className={header.list}>
-              <a href="#link">Messages</a>
+              <a href="/messages">Messages</a>
             </li>
             <li className={header.list}>
-              <a href="#link">Explore</a>
+              <a href="/explore">Explore</a>
             </li>
             <li className={header.list}>
-              <a href="#link">Search</a>
+              <a href="/search">Search</a>
             </li>
             <li className={header.list}>
-              <a href="#link">Menu</a>
+              <a href="/menu">Menu</a>
             </li>
           </ul>
         </div>

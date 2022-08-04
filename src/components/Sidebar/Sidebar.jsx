@@ -1,5 +1,5 @@
 import React from "react";
-import photo from "../../images/jenna.png";
+import photo from "../../images/lana.jpeg";
 import sidebar from "./Sidebar.module.css";
 
 const Sidebar = () => {
@@ -8,7 +8,7 @@ const Sidebar = () => {
       <div>
         <div className={sidebar.photo}>
           <img className={sidebar.img} src={photo} alt="M" />
-          <p className={sidebar.name}>Jenna Davis</p>
+          <p className={sidebar.name}>Lana Davis</p>
           <p className={sidebar.city}>Melbourne, AU</p>
           <div className={sidebar.tick}></div>
         </div>
@@ -19,44 +19,44 @@ const Sidebar = () => {
           </p>
           <p>
             <span>Following</span>
-            2.4k
+            1.4k
           </p>
         </div>
       </div>
       <nav className={sidebar.menu}>
         <ul>
           <li className={sidebar.item}>
-            <a href="#link">Feed</a>
+            <a href="/feed">Feed</a>
           </li>
           <li className={sidebar.item}>
-            <a href="#link">Explore</a>
+            <a href="/explore">Explore</a>
           </li>
           <li className={sidebar.item}>
-            <a href="#link">Notifications</a>
+            <a href="/notifications">Notifications</a>
           </li>
           <li className={sidebar.item}>
-            <a href="#link">Messages</a>
-          </li>
-        </ul>
-        <div className={sidebar.separator}></div>
-        <ul>
-          <li className={sidebar.item}>
-            <a href="#link">Direct</a>
-          </li>
-          <li className={sidebar.item}>
-            <a href="#link">Stats</a>
-          </li>
-          <li className={sidebar.item}>
-            <a href="#link">Settings</a>
+            <a href="/messages">Messages</a>
           </li>
         </ul>
         <div className={sidebar.separator}></div>
         <ul>
           <li className={sidebar.item}>
-            <a href="#link">Privacy</a>
+            <a href="/direct">Direct</a>
           </li>
           <li className={sidebar.item}>
-            <a href="#link">Help</a>
+            <a href="/stats">Stats</a>
+          </li>
+          <li className={sidebar.item}>
+            <a href="/settings">Settings</a>
+          </li>
+        </ul>
+        <div className={sidebar.separator}></div>
+        <ul>
+          <li className={sidebar.item}>
+            <a href="/privacy">Privacy</a>
+          </li>
+          <li className={sidebar.item}>
+            <a href="/help">Help</a>
           </li>
         </ul>
       </nav>

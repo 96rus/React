@@ -6,6 +6,8 @@
 	z-index: 2;
 }
 .footer {
+	position: sticky;
+	bottom: 0;
 	background: #364e74;
 	padding-bottom: 1rem;
 }
