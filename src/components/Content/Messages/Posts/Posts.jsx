@@ -2,14 +2,14 @@ import React from "react";
 import post from "./Post.module.css";
 import img from "./../../../../images/dan.jpg";
 
-const Posts = () => {
+const Posts = (props) => {
   return (
     <div className={post.post}>
       <img src={img} alt="postPhoto" />
       <div className={post.message}>
-        <p>8:03 am</p>
+        <p>{props.time}</p>
         <div className={post.text}>
-          <p>Hi Jenna! I made a new design, and i wanted to show it to you.</p>
+          <p>{props.message}</p>
         </div>
       </div>
     </div>
