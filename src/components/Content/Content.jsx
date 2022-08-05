@@ -12,7 +12,7 @@ const Content = () => {
       <div className={content.content}>
         <Routes>
           <Route path="/notifications" element={<Notifications />} />
-          <Route path="/messages" element={<Messages />} />
+          <Route path="/messages/*" element={<Messages />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/stats" element={<Stats />} />
 					<Route path="/explore" element={<Explore />} />

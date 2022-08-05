@@ -1,11 +1,10 @@
 import React from "react";
 import post from "./Post.module.css";
-import img from "./../../../../images/dan.jpg";
 
-const Posts = (props) => {
+const Post = (props) => {
   return (
     <div className={post.post}>
-      <img src={img} alt="postPhoto" />
+      <img src={props.user} alt="postPhoto" />
       <div className={post.message}>
         <p>{props.time}</p>
         <div className={post.text}>
@@ -16,4 +15,4 @@ const Posts = (props) => {
   );
 };
 
-export default Posts;
+export default Post;

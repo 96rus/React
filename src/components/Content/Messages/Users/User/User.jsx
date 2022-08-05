@@ -1,12 +1,13 @@
-import React from "react";
-import user from "./User.module.css"
-import img1 from "./../../../../../images/dan.jpg";
+import React from 'react'
+import user from './User.module.css'
+import { Link } from "react-router-dom";
 
-const User = () => {
+const User = (props) => {
+	let path = "/messages/" + props.id;
   return (
-    <div className={user.user}>
-      <img src={img1} alt="user" />
-    </div>
+    <Link to={path} className={user.user}>
+      <img src={props.user} alt="user" />
+    </Link>
   );
 };
 
