@@ -4,11 +4,10 @@ import Messages from "./Messages/Messages";
 import Notifications from "./Notifications/Notifications";
 import Stats from "./Stats/Stats";
 import Settings from "./Settings/Settings";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 const Content = () => {
   return (
-    <BrowserRouter>
       <div className={content.content}>
         <Routes>
           <Route path="/notifications" element={<Notifications />} />
@@ -17,7 +16,6 @@ const Content = () => {
           <Route path="/stats" element={<Stats />} />
         </Routes>
       </div>
-    </BrowserRouter>
   );
 };
 

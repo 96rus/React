@@ -24,11 +24,13 @@
 	font-size: 1.6rem;
 }
 .list {
-  color: #ffffff;
   padding: 1.6rem;
 }
 .list:last-child {
   margin-left: auto;
+}
+.item {
+	color: #fafafa;
 }
 .active {
 	color: #d7c904;
