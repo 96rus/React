@@ -1,6 +1,7 @@
 import React from "react";
 import photo from "../../images/lana.jpeg";
 import sidebar from "./Sidebar.module.css";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -26,37 +27,37 @@ const Sidebar = () => {
       <nav className={sidebar.menu}>
         <ul>
           <li className={sidebar.item}>
-            <a href="/feed">Feed</a>
+            <Link to="/feed">Feed</Link>
           </li>
           <li className={sidebar.item}>
-            <a href="/explore">Explore</a>
+            <Link to="/explore">Explore</Link>
           </li>
           <li className={sidebar.item}>
-            <a href="/notifications">Notifications</a>
+            <Link to="/notifications">Notifications</Link>
           </li>
           <li className={sidebar.item}>
-            <a href="/messages">Messages</a>
-          </li>
-        </ul>
-        <div className={sidebar.separator}></div>
-        <ul>
-          <li className={sidebar.item}>
-            <a href="/direct">Direct</a>
-          </li>
-          <li className={sidebar.item}>
-            <a href="/stats">Stats</a>
-          </li>
-          <li className={sidebar.item}>
-            <a href="/settings">Settings</a>
+            <Link to="/messages">Messages</Link>
           </li>
         </ul>
         <div className={sidebar.separator}></div>
         <ul>
           <li className={sidebar.item}>
-            <a href="/privacy">Privacy</a>
+            <Link to="/direct">Direct</Link>
           </li>
           <li className={sidebar.item}>
-            <a href="/help">Help</a>
+            <Link to="/stats">Stats</Link>
+          </li>
+          <li className={sidebar.item}>
+            <Link to="/settings">Settings</Link>
+          </li>
+        </ul>
+        <div className={sidebar.separator}></div>
+        <ul>
+          <li className={sidebar.item}>
+            <Link to="/privacy">Privacy</Link>
+          </li>
+          <li className={sidebar.item}>
+            <Link to="/help">Help</Link>
           </li>
         </ul>
       </nav>

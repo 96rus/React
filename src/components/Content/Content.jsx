@@ -5,6 +5,7 @@ import Notifications from "./Notifications/Notifications";
 import Stats from "./Stats/Stats";
 import Settings from "./Settings/Settings";
 import { Route, Routes } from "react-router-dom";
+import Explore from "./Explore/Explore";
 
 const Content = () => {
   return (
@@ -14,6 +15,7 @@ const Content = () => {
           <Route path="/messages" element={<Messages />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/stats" element={<Stats />} />
+					<Route path="/explore" element={<Explore />} />
         </Routes>
       </div>
   );
