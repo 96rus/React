@@ -18,14 +18,12 @@ const Chat = () => {
 		{user: img6, id: 6},
 	]
 
+	let chatElements = chatData
+	.map( c => <Posts user={c.user} id={c.id} />)
+
 	return (
 		<div>
-			<Posts user={chatData[0].user} id={chatData[0].id} />
-      <Posts user={chatData[1].user} id={chatData[1].id} />
-      <Posts user={chatData[2].user} id={chatData[2].id} />
-      <Posts user={chatData[3].user} id={chatData[3].id} />
-      <Posts user={chatData[4].user} id={chatData[4].id} />
-      <Posts user={chatData[5].user} id={chatData[5].id} />
+			{chatElements}
 		</div>
 	)
 }

@@ -17,22 +17,19 @@ const Users = () => {
 		{user: img4, id: 4},
 		{user: img5, id: 5},
 		{user: img6, id: 6},
+		{user: img3, id: 3},
+		{user: img1, id: 1},
+		{user: img5, id: 5},
+		{user: img2, id: 2},
+		{user: img4, id: 4},
+		{user: img3, id: 3},
 	]
+
+	let userElements = userData.map( u => <User user={u.user} id={u.id}/>)
 
   return (
     <div className={users.users}>
-      <User user={userData[0].user} id={userData[0].id}/>
-      <User user={userData[1].user} id={userData[1].id}/>
-      <User user={userData[2].user} id={userData[2].id}/>
-      <User user={userData[3].user} id={userData[3].id}/>
-      <User user={userData[4].user} id={userData[4].id}/>
-      <User user={userData[5].user} id={userData[5].id}/>
-			<User user={userData[3].user} id={userData[3].id}/>
-			<User user={userData[1].user} id={userData[1].id}/>
-			<User user={userData[5].user} id={userData[5].id}/>
-			<User user={userData[2].user} id={userData[2].id}/>
-			<User user={userData[4].user} id={userData[4].id}/>
-			<User user={userData[3].user} id={userData[3].id}/>
+      {userElements}
     </div>
   );
 };

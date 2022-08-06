@@ -36,25 +36,13 @@ const Explore = () => {
 		{value: settings, title: 'Settings'},
 	]
 
+	let exploreElements = exploreData.map( e => <Item value={e.value} title={e.title}/>)
+
   return (
     <section>
       <h1 className="title">Explore</h1>
       <div className={explore.container}>
-        <Item value={exploreData[0].value} title={exploreData[0].title}/>
-        <Item value={exploreData[1].value} title={exploreData[1].title}/>
-        <Item value={exploreData[2].value} title={exploreData[2].title}/>
-        <Item value={exploreData[3].value} title={exploreData[3].title}/>
-        <Item value={exploreData[4].value} title={exploreData[4].title}/>
-        <Item value={exploreData[5].value} title={exploreData[5].title}/>
-        <Item value={exploreData[6].value} title={exploreData[6].title}/>
-        <Item value={exploreData[7].value} title={exploreData[7].title}/>
-        <Item value={exploreData[8].value} title={exploreData[8].title}/>
-        <Item value={exploreData[9].value} title={exploreData[9].title}/>
-        <Item value={exploreData[10].value} title={exploreData[10].title}/>
-        <Item value={exploreData[11].value} title={exploreData[11].title}/>
-        <Item value={exploreData[12].value} title={exploreData[12].title}/>
-        <Item value={exploreData[13].value} title={exploreData[13].title}/>
-        <Item value={exploreData[14].value} title={exploreData[14].title}/>
+				{exploreElements}
       </div>
     </section>
   );
