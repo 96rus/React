@@ -18,25 +18,43 @@ import settings from "../../../images/settings.svg";
 import Item from "./Item/Item";
 
 const Explore = () => {
+	let exploreData = [
+		{value: feed, title: 'Feed'},
+		{value: friends, title: 'Friends'},
+		{value: videos, title: 'Videos'},
+		{value: tagEuro, title: 'Pages'},
+		{value: cart, title: 'Commerce'},
+		{value: house, title: 'Interests'},
+		{value: chrono, title: 'Stories'},
+		{value: question, title: 'Questions'},
+		{value: news, title: 'Groups'},
+		{value: cake, title: 'News'},
+		{value: envato, title: 'Envato'},
+		{value: calendar, title: 'Events'},
+		{value: pin, title: 'CSS Ninja'},
+		{value: idea, title: 'Elements'},
+		{value: settings, title: 'Settings'},
+	]
+
   return (
     <section>
       <h1 className="title">Explore</h1>
       <div className={explore.container}>
-        <Item value={feed} title={'Feed'}/>
-        <Item value={friends} title={'Friends'}/>
-        <Item value={videos} title={'Videos'}/>
-        <Item value={tagEuro} title={'Pages'}/>
-        <Item value={cart} title={'Commerce'}/>
-        <Item value={house} title={'Interests'}/>
-        <Item value={chrono} title={'Stories'}/>
-        <Item value={question} title={'Questions'}/>
-        <Item value={news} title={'News'}/>
-        <Item value={cake} title={'Groups'}/>
-        <Item value={envato} title={'Envato'}/>
-        <Item value={calendar} title={'Events'}/>
-        <Item value={pin} title={'CSS Ninja'}/>
-        <Item value={idea} title={'Elements'}/>
-        <Item value={settings} title={'Settings'}/>
+        <Item value={exploreData[0].value} title={exploreData[0].title}/>
+        <Item value={exploreData[1].value} title={exploreData[1].title}/>
+        <Item value={exploreData[2].value} title={exploreData[2].title}/>
+        <Item value={exploreData[3].value} title={exploreData[3].title}/>
+        <Item value={exploreData[4].value} title={exploreData[4].title}/>
+        <Item value={exploreData[5].value} title={exploreData[5].title}/>
+        <Item value={exploreData[6].value} title={exploreData[6].title}/>
+        <Item value={exploreData[7].value} title={exploreData[7].title}/>
+        <Item value={exploreData[8].value} title={exploreData[8].title}/>
+        <Item value={exploreData[9].value} title={exploreData[9].title}/>
+        <Item value={exploreData[10].value} title={exploreData[10].title}/>
+        <Item value={exploreData[11].value} title={exploreData[11].title}/>
+        <Item value={exploreData[12].value} title={exploreData[12].title}/>
+        <Item value={exploreData[13].value} title={exploreData[13].title}/>
+        <Item value={exploreData[14].value} title={exploreData[14].title}/>
       </div>
     </section>
   );
