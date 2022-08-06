@@ -7,15 +7,15 @@ import Settings from "./Settings/Settings";
 import { Route, Routes } from "react-router-dom";
 import Explore from "./Explore/Explore";
 
-const Content = () => {
+const Content = (props) => {
   return (
       <div className={content.content}>
         <Routes>
           <Route path="/notifications" element={<Notifications />} />
-          <Route path="/messages/*" element={<Messages />} />
+          <Route path="/messages/*" element={<Messages userData={props.userData} chatData={props.chatData} postData={props.postData}/>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/stats" element={<Stats />} />
-					<Route path="/explore" element={<Explore />} />
+					<Route path="/explore" element={<Explore exploreData={props.exploreData}/>} />
         </Routes>
       </div>
   );
