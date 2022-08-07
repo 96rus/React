@@ -9,9 +9,9 @@ const Messages = (props) => {
     <div className={messages.messages}>
       <div className={messages.header}>
         <h1 className="title">Messages</h1>
-        <Users userData={props.userData} />
+        <Users userData={props.state.userData} />
       </div>
-			<Chat chatData={props.chatData} postData={props.postData}/>
+			<Chat chatData={props.state.chatData} postData={props.state.postData}/>
       <div className={messages.footer}>
         <Textarea />
       </div>

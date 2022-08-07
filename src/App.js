@@ -8,7 +8,7 @@ const App = (props) => {
     <div className="App">
       <Header />
 			<Sidebar />
-			<Content userData={props.userData} chatData={props.chatData} exploreData={props.exploreData} postData={props.postData}/>
+			<Content state={props.appState}/>
     </div>
   );
 };

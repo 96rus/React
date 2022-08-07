@@ -12,10 +12,10 @@ const Content = (props) => {
       <div className={content.content}>
         <Routes>
           <Route path="/notifications" element={<Notifications />} />
-          <Route path="/messages/*" element={<Messages userData={props.userData} chatData={props.chatData} postData={props.postData}/>} />
+          <Route path="/messages/*" element={<Messages state={props.state}/>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/stats" element={<Stats />} />
-					<Route path="/explore" element={<Explore exploreData={props.exploreData}/>} />
+					<Route path="/explore" element={<Explore exploreData={props.state.exploreData}/>} />
         </Routes>
       </div>
   );
