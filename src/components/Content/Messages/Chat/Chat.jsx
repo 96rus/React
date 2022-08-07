@@ -1,15 +1,17 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom';
 import Posts from "./Posts/Posts";
 // import chat from './Chat.module.css'
 
 const Chat = (props) => {
-
 	let chatElements = props.chatData
-	.map( c => <Posts postData={props.postData} user={c.user} id={c.id} />)
+	.map( c => <Route path={String(c.id)} element={<Posts postData={props.postData} user={c.user} />} />)
 
 	return (
 		<div>
-			{chatElements}
+			<Routes>
+				{chatElements}
+			</Routes>
 		</div>
 	)
 }
