@@ -8,7 +8,7 @@ const App = (props) => {
     <div className="App">
       <Header />
 			<Sidebar />
-			<Content state={props.state}/>
+			<Content state={props.state} addPost={props.addPost}/>
     </div>
   );
 };

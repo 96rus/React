@@ -19,6 +19,7 @@ import img3 from "../images/bobby.jpg";
 import img4 from "../images/elise.jpg";
 import img5 from "../images/stella.jpg";
 import img6 from "../images/jenna.png";
+import {rerenderEntireTree} from "../render";
 
 let state = {
 	explore: {
@@ -42,11 +43,11 @@ let state = {
 	},
 	messages: {
 		postData: [
-			{message: "Hi there!", time: "8:03 am"},
-			{message: "I made a new design, and i wanted to show it to you.", time: "9:14 am"},
-			{message: "I'm going to Starbucks now, would you like to go with me?", time: "11:50 am"},
-			{message: "What are you going to do tonight?", time: "18:50 pm"},
-			{message: "Good night!", time: "22:50 pm"},
+			{id: 1, message: "Hi there!", time: "8:03 AM"},
+			{id: 1, message: "I made a new design, and i wanted to show it to you.", time: "9:14 AM"},
+			{id: 1, message: "I'm going to Starbucks now, would you like to go with me?", time: "11:50 AM"},
+			{id: 1, message: "What are you going to do tonight?", time: "18:50 PM"},
+			{id: 1, message: "Good night!", time: "22:50 PM"},
 		],
 		chatData: [
 			{user: img1, id: 1},
@@ -71,6 +72,17 @@ let state = {
 			{user: img3, id: 3},
 		]
 	}
+}
+
+export let addPost = (postMessage) => {
+	let newPost = {
+		id: 5,
+		message: postMessage,
+		time: new Date().toLocaleTimeString('en-US', { hour: "numeric", minute: "numeric"})
+	};
+
+	state.messages.postData.push(newPost);
+	rerenderEntireTree(state);
 }
 
 export default state;

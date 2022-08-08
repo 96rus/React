@@ -13,7 +13,7 @@ const Messages = (props) => {
       </div>
 			<Chat chatData={props.state.chatData} postData={props.state.postData}/>
       <div className={messages.footer}>
-        <Textarea />
+        <Textarea addPost={props.addPost} />
       </div>
     </div>
   );

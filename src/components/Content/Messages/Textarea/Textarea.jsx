@@ -1,13 +1,21 @@
 import React from "react";
 import textarea from "./Textarea.module.css";
 
-const Textarea = () => {
+const Textarea = (props) => {
+
+	let newPostElement = React.useRef();
+
+  let addPost = () => { 
+		let text = newPostElement.current.value;
+    props.addPost(text);
+  };
+
   return (
     <div className={textarea.textarea}>
       <div>
-        <button>Send</button>
+        <button onClick={addPost}>Send</button>
       </div>
-      <textarea className={textarea.chat}></textarea>
+      <textarea ref={newPostElement} className={textarea.chat}></textarea>
     </div>
   );
 };

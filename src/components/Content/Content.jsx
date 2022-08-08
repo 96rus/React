@@ -12,7 +12,7 @@ const Content = (props) => {
       <div className={content.content}>
         <Routes>
           <Route path="/notifications" element={<Notifications />} />
-          <Route path="/messages/*" element={<Messages state={props.state.messages}/>} />
+          <Route path="/messages/*" element={<Messages state={props.state.messages} addPost={props.addPost}/>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/stats" element={<Stats />} />
 					<Route path="/explore" element={<Explore exploreData={props.state.explore.exploreData}/>} />
