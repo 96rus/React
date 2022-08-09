@@ -19,7 +19,10 @@ import img3 from "../images/bobby.jpg";
 import img4 from "../images/elise.jpg";
 import img5 from "../images/stella.jpg";
 import img6 from "../images/jenna.png";
-import {rerenderEntireTree} from "../render";
+
+let rerenderEntireTree = () => {
+	console.log("State changed")
+};
 
 let state = {
 	explore: {
@@ -49,6 +52,7 @@ let state = {
 			{id: 1, message: "What are you going to do tonight?", time: "18:50 PM"},
 			{id: 1, message: "Good night!", time: "22:50 PM"},
 		],
+		newPostText: 'Input a message',
 		chatData: [
 			{user: img1, id: 1},
 			{user: img2, id: 2},
@@ -74,15 +78,27 @@ let state = {
 	}
 }
 
-export let addPost = (postMessage) => {
+window.state = state;
+
+export const addPost = () => {
 	let newPost = {
 		id: 5,
-		message: postMessage,
+		message: state.messages.newPostText,
 		time: new Date().toLocaleTimeString('en-US', { hour: "numeric", minute: "numeric"})
 	};
 
 	state.messages.postData.push(newPost);
+	state.messages.newPostText = '';
 	rerenderEntireTree(state);
+}
+
+export const updateNewPostText = (newText) => {
+	state.messages.newPostText = newText;
+	rerenderEntireTree(state);
+	};
+
+export const subscribe = (observer) => {
+	rerenderEntireTree = observer;
 }
 
 export default state;

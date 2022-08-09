@@ -6,16 +6,20 @@ const Textarea = (props) => {
 	let newPostElement = React.useRef();
 
   let addPost = () => { 
-		let text = newPostElement.current.value;
-    props.addPost(text);
+    props.addPost();
   };
+
+	let onPostChange = () => {
+		let text = newPostElement.current.value;
+		props.updateNewPostText(text);
+	}
 
   return (
     <div className={textarea.textarea}>
       <div>
         <button onClick={addPost}>Send</button>
       </div>
-      <textarea ref={newPostElement} className={textarea.chat}></textarea>
+      <textarea onChange={onPostChange} ref={newPostElement} className={textarea.chat} value={props.newPostText} />
     </div>
   );
 };
