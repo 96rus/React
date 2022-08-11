@@ -20,6 +20,10 @@ import img4 from "../images/elise.jpg";
 import img5 from "../images/stella.jpg";
 import img6 from "../images/jenna.png";
 
+const ADD_POST = 'ADD-POST';
+let UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+
+
 let store = {
   _state: {
     explore: {
@@ -45,21 +49,21 @@ let store = {
       postData: [
         { id: 1, message: "Hi there!", time: "8:03 AM" },
         {
-          id: 1,
+          id: 2,
           message: "I made a new design, and i wanted to show it to you.",
           time: "9:14 AM",
         },
         {
-          id: 1,
+          id: 3,
           message: "I'm going to Starbucks now, would you like to go with me?",
           time: "11:50 AM",
         },
         {
-          id: 1,
+          id: 4,
           message: "What are you going to do tonight?",
-          time: "18:50 PM",
+          time: "06:50 PM",
         },
-        { id: 1, message: "Good night!", time: "22:50 PM" },
+        { id: 5, message: "Good night!", time: "10:50 PM" },
       ],
       newPostText: "Input a message",
       chatData: [
@@ -86,33 +90,37 @@ let store = {
       ],
     },
   },
-  getState() {
-    return this._state;
-  },
   _callSubscriber() {
     console.log("State changed");
-  },
-  addPost() {
-    let newPost = {
-      id: 5,
-      message: this._state.messages.newPostText,
-      time: new Date().toLocaleTimeString("en-US", {
-        hour: "numeric",
-        minute: "numeric",
-      }),
-    };
-    this._state.messages.postData.push(newPost);
-    this._state.messages.newPostText = "";
-    this._callSubscriber(this._state);
-  },
-  updateNewPostText(newText) {
-    this._state.messages.newPostText = newText;
-    this._callSubscriber(this._state);
   },
   subscribe(observer) {
     this._callSubscriber = observer;
   },
+  getState() {
+    return this._state;
+  },
+  dispatch(action) {
+    if (action.type === ADD_POST) {
+      let newPost = {
+        id: 5,
+        message: this._state.messages.newPostText,
+        time: new Date().toLocaleTimeString("en-US", {
+          hour: "numeric",
+          minute: "numeric",
+        }),
+      };
+      this._state.messages.postData.push(newPost);
+      this._state.messages.newPostText = "";
+      this._callSubscriber(this._state);
+    } else if (action.type === UPDATE_NEW_POST_TEXT) {
+      this._state.messages.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    }
+  },
 };
+
+export const addPostActionCreator = () => ({type: ADD_POST});
+export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
 
 export default store;
 window.store = store;

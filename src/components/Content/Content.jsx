@@ -9,15 +9,23 @@ import Explore from "./Explore/Explore";
 
 const Content = (props) => {
   return (
-      <div className={content.content}>
-        <Routes>
-          <Route path="/notifications" element={<Notifications />} />
-          <Route path="/messages/*" element={<Messages state={props.state.messages} addPost={props.addPost} updateNewPostText={props.updateNewPostText} />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/stats" element={<Stats />} />
-					<Route path="/explore" element={<Explore exploreData={props.state.explore.exploreData}/>} />
-        </Routes>
-      </div>
+    <div className={content.content}>
+      <Routes>
+        <Route path="/notifications" element={<Notifications />} />
+        <Route
+          path="/messages*"
+          element={
+            <Messages state={props.state.messages} dispatch={props.dispatch} />
+          }
+        />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/stats" element={<Stats />} />
+        <Route
+          path="/explore"
+          element={<Explore exploreData={props.state.explore.exploreData} />}
+        />
+      </Routes>
+    </div>
   );
 };
 

@@ -7,8 +7,8 @@ const App = (props) => {
   return (
     <div className="App">
       <Header />
-			<Sidebar />
-			<Content updateNewPostText={props.updateNewPostText} state={props.state} addPost={props.addPost}/>
+      <Sidebar />
+      <Content state={props.state} dispatch={props.dispatch} />
     </div>
   );
 };

@@ -11,9 +11,12 @@ const Messages = (props) => {
         <h1 className="title">Messages</h1>
         <Users userData={props.state.userData} />
       </div>
-			<Chat chatData={props.state.chatData} postData={props.state.postData}/>
+      <Chat chatData={props.state.chatData} postData={props.state.postData} />
       <div className={messages.footer}>
-        <Textarea addPost={props.addPost} newPostText={props.state.newPostText} updateNewPostText={props.updateNewPostText} />
+        <Textarea
+          dispatch={props.dispatch}
+          newPostText={props.state.newPostText}
+        />
       </div>
     </div>
   );
