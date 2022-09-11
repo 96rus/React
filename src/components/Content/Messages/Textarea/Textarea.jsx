@@ -1,6 +1,9 @@
 import React from "react";
 import textarea from "./Textarea.module.css";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../../redux/state";
+import {
+  addPostActionCreator,
+  updateNewPostTextActionCreator,
+} from "../../../../redux/postReducer";
 
 const Textarea = (props) => {
   let newPostElement = React.useRef();

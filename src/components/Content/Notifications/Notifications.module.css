@@ -1,0 +1,7 @@
+.textarea {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background: #1c2330;
+  border-radius: 15px;
+}

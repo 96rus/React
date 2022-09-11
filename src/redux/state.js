@@ -19,10 +19,8 @@ import img3 from "../images/bobby.jpg";
 import img4 from "../images/elise.jpg";
 import img5 from "../images/stella.jpg";
 import img6 from "../images/jenna.png";
-
-const ADD_POST = 'ADD-POST';
-let UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-
+import postReducer from "./postReducer";
+import messagesReducer from "./messagesReducer";
 
 let store = {
   _state: {
@@ -65,7 +63,7 @@ let store = {
         },
         { id: 5, message: "Good night!", time: "10:50 PM" },
       ],
-      newPostText: "Input a message",
+      newPostText: "",
       chatData: [
         { user: img1, id: 1 },
         { user: img2, id: 2 },
@@ -88,6 +86,8 @@ let store = {
         { user: img4, id: 4 },
         { user: img3, id: 3 },
       ],
+      myMessages: [{ id: 1, message: "What's up?", time: "9:25 AM" }],
+      newMessageBody: "",
     },
   },
   _callSubscriber() {
@@ -100,27 +100,11 @@ let store = {
     return this._state;
   },
   dispatch(action) {
-    if (action.type === ADD_POST) {
-      let newPost = {
-        id: 5,
-        message: this._state.messages.newPostText,
-        time: new Date().toLocaleTimeString("en-US", {
-          hour: "numeric",
-          minute: "numeric",
-        }),
-      };
-      this._state.messages.postData.push(newPost);
-      this._state.messages.newPostText = "";
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_POST_TEXT) {
-      this._state.messages.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    }
+    this._state.messages = postReducer(this._state.messages, action);
+    this._state.messages = messagesReducer(this._state.messages, action);
+    this._callSubscriber(this._state);
   },
 };
-
-export const addPostActionCreator = () => ({type: ADD_POST});
-export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
 
 export default store;
 window.store = store;

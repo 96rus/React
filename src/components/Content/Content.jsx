@@ -11,9 +11,14 @@ const Content = (props) => {
   return (
     <div className={content.content}>
       <Routes>
-        <Route path="/notifications" element={<Notifications />} />
         <Route
-          path="/messages*"
+          path="/notifications"
+          element={
+            <Notifications store={props.store} state={props.state.messages} />
+          }
+        />
+        <Route
+          path="/messages/*"
           element={
             <Messages state={props.state.messages} dispatch={props.dispatch} />
           }
